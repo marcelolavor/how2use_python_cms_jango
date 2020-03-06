@@ -1,0 +1,76 @@
+1 - Atualização do pip de 9.0.3 para 10.0.1
+
+python get-pip.py
+
+
+
+2 - Instalando o virtualenv
+
+pip install virtualenv
+
+
+
+3 - instalando o virtualenvwrapper-win
+
+
+pip install virtualenvwrapper-win
+
+easy_install virtualenvwrapper-win
+
+git clone git://github.com/davidmarble/virtualenvwrapper-win.git
+
+cd virtualenvwrapper-win
+
+python setup.py install
+
+
+set WORKON_HOME=%VIRTUAL_ENV%\..\Envs
+mkdir -p %WORKON_HOME%
+%VIRTUAL_ENV%\Scripts\virtualenvwrapper.sh
+mkvirtualenv pub
+
+
+
+2 - Instalação do Django-CMS 3.5.2.
+
+pip install djangocms-installer
+
+
+
+3 - Criação de um projeto Django CMS
+
+djangocms -p mitrex modern_business
+
+PS:
+- Cuidado para não gerar um path muito comprido
+- Execute fora de qualquer IDE
+
+
+4 - Ativar o projeto
+
+source ./NomeDoAmbiente/bin/activate
+
+
+
+5 - Iniciar o projeto
+
+python manage.py runserver
+
+
+
+6 - Acesso o site Admin
+
+http://127.0.0.1:8000 e utilize admim como usuário e senha
+
+
+
+7 - Listar as dependências e atualizar a lista de requirements.txt
+
+
+pip freeze > requirements.txt
+
+PS: Comando para instalar projeto em outro local "pip install -r requirements.txt"
+
+
+
+
